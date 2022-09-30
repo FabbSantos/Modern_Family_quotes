@@ -1,5 +1,3 @@
-Access-Control-Allow-Origin: https://amazing.site
-
 const quoteText = document.querySelectorAll(".quote"),
 quoteBtn = document.querySelector("button");
 
