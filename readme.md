@@ -1,4 +1,4 @@
-* Modern Family Quotes *
+# Modern Family Quotes
 
 This is an App that shows random quotes of the tv show Modern Family.
 
