@@ -25,6 +25,7 @@ body {
 }
 .wrapper header {
     font-size: 3em;
+    text-transform: uppercase;
     font-weight: 600;
     text-align: center; 
 }
@@ -38,10 +39,11 @@ span.orange{
 
 .content .quote-area {
     display: flex;
+    min-height: 6em;
     justify-content: center;
 }
 .quote-area i {
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 .quote-area i:first-child {
     margin: 3px 10px 0 0;
@@ -52,8 +54,9 @@ span.orange{
     margin: 0 0 3px 10px;
 }
 .quote-area .quote {
-    font-size: 1.5em; 
+    font-size: 1.3em; 
     text-align: center;
+    align-self: center;
     word-break: break-all;
 }
 
