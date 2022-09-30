@@ -1,0 +1,118 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all .3s ease;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #cc0000; 
+}
+.wrapper {
+    width: 70em;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #000;
+    padding: 30px 30px 25px;
+}
+.wrapper header {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center; 
+}
+span.orange{
+    color: #fd7e14;
+    font-family: "Poppins", serif;
+}
+.wrapper .content {
+    margin: 35px 0;
+}
+
+.content .quote-area {
+    display: flex;
+    justify-content: center;
+}
+.quote-area i {
+    font-size: 1.1em;
+}
+.quote-area i:first-child {
+    margin: 3px 10px 0 0;
+}
+.quote-area i:last-child {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+.quote-area .quote {
+    font-size: 1.5em; 
+    text-align: center;
+    word-break: break-all;
+}
+
+.content .author {
+    display: flex;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 20px;
+    justify-content:  flex-end;
+}
+.author span:first-child {
+    font-family: monospace;
+    margin: -7px 5px 0 0;
+}
+
+.wrapper .buttons {
+    border-top: 1px solid #ccc;
+}
+
+.buttons .features {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.features ul {
+    display: flex;
+}
+.features ul li {
+    list-style: none;
+    margin: 0 5px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cc0000;
+    border-radius: 50%; 
+    border: 2px solid #cc0000; 
+}
+.features ul li:hover {
+    color: #fff;
+    background-color: #cc0000;
+    cursor: pointer;
+    transition: color .1s ease, background-color .2s ease;
+}
+
+.features  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background-color: #cc0000;
+    color: #fff;
+}
+.features button:hover {
+    box-shadow: 2px 2px 2px 2px #000;
+    transition: box-shadow .2s ease; 
+} 
