@@ -1,25 +1,52 @@
 const quoteText = document.querySelector(".quote"),
 quoteBtn = document.querySelector("button"),
-authorName = document.querySelector(".name"); 
-// let firstQuote = String;
+authorName = document.querySelector(".name"),
+soundBtn = document.querySelector(".sound"), 
+copyBtn = document.querySelector(".copy"), 
+twitterBtn = document.querySelector(".twitter"),
+tooltip = document.querySelector(".tooltiptext");
 
-// window.onload = async () => {
-//     let someData = await promiseOfSomeData;
-//     someData ? quoteText.innerText = firstQuote : {};
-// };
-// const promiseOfSomeData = fetch("https://cors.deno.dev/https://mfaas.deno.dev/quotes/random").then(r => r.json()).then(data => {
-//     firstQuote = data.quote;
-// });
 
 
 // random quote function
-function randomQuote(){
+async function randomQuote(){
+    quoteBtn.classList.add("loading");
+    quoteBtn.innerText = "Loading Quote..."
 
     // fetching a random quote and parsing it to js object
-    fetch("https://cors.deno.dev/https://mfaas.deno.dev/quotes/random").then(res => res.json()).then(result =>{
-        quoteText.innerText = result.quote;
-        authorName.innerText = result.actor;
-    });
+
+    const res = await fetch("https://cors.deno.dev/https://mfaas.deno.dev/quotes/random");
+    const result = await res.json();
+    quoteText.innerText = result.quote;
+    authorName.innerText = result.actor;
+    setTimeout(() => { 
+        quoteBtn.innerText = "New Quote";
+        quoteBtn.classList.remove("loading");
+    }, 500);
 }
+
+soundBtn.addEventListener("click", () =>{
+    // an api that represents a speech request
+    let speech = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${authorName.innerText} `);
+    speechSynthesis.speak(speech);
+} )
+
+copyBtn.addEventListener("click", () =>{
+
+    // copying the quote text
+    // write.Text() writes the specified text into clipboard
+    navigator.clipboard.writeText(quoteText.innerText);
+    tooltip.classList.add("copied");
+
+} )
+copyBtn.addEventListener("mouseout", ( )=>{
+    tooltip.classList.remove("copied");
+})
+
+twitterBtn.addEventListener("click", () =>{
+    let tweet = `https://twitter.com/intent/tweet?url=${quoteText.innerText}%0A%0Aby%20${authorName.innerText}%0A%0ASee%20your%20quote%20in%20Phil'sOsophy`;
+    window.open( tweet, "_blank"); //opening a new tab in twitter with the quote text
+} )
+
 
 quoteBtn.addEventListener("click", randomQuote);
