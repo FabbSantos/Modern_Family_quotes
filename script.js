@@ -28,6 +28,7 @@ async function randomQuote(){
 soundBtn.addEventListener("click", () =>{
     // an api that represents a speech request
     let speech = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${authorName.innerText} `);
+    speech.lang= 'en-US';
     speechSynthesis.speak(speech);
 } )
 
@@ -44,7 +45,7 @@ copyBtn.addEventListener("mouseout", ( )=>{
 })
 
 twitterBtn.addEventListener("click", () =>{
-    let tweet = `https://twitter.com/intent/tweet?url=${quoteText.innerText}%0A%0Aby%20${authorName.innerText}%0A%0ASee%20your%20quote%20in%20Phil's-Osophy:%20https://phil-osophy.netlify.app/`;
+    let tweet = `https://twitter.com/intent/tweet?url="${quoteText.innerText}"%0A%0A—%20${authorName.innerText}%0A%0ASee%20your%20quote%20in%20Phil's-Osophy:%20https://phil-osophy.netlify.app/`;
     window.open( tweet, "_blank"); //opening a new tab in twitter with the quote text
 })
 
