@@ -162,3 +162,9 @@ button.loading{
   visibility: visible;
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+}
