@@ -15,7 +15,7 @@ async function randomQuote(){
 
     // fetching a random quote and parsing it to js object
 
-    const res = await fetch("https://cors.deno.dev/https://mfaas.deno.dev/quotes/random");
+    const res = await fetch("https://mfaas.deno.dev/quotes/random");
     const result = await res.json();
     quoteText.innerText = result.quote;
     authorName.innerText = result.actor;
