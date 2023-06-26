@@ -1,5 +1,7 @@
 # Modern Family Quotes
 
-This is an App that shows random quotes of the tv show Modern Family.
+This app shows random quotes from the tv show Modern Family.
 
 Try it to see one of many awesome quotes of the characters.
+
+## Access here: [Modern Family Quotes](https://phil-osophy.netlify.app/)
